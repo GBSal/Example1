@@ -11,7 +11,8 @@ using Microsoft.Owin.Security.Cookies;
 
 namespace SampaleAuthentication
 {
-    public class StartUp
+    public class Startup
+
     {
 
         public static Func<UserManager<AppUser>> UserManagerFactory { get; private set; }
@@ -22,7 +23,7 @@ namespace SampaleAuthentication
             app.UseCookieAuthentication(new CookieAuthenticationOptions
             {
                 AuthenticationType = DefaultAuthenticationTypes.ApplicationCookie,
-                LoginPath = new PathString("/auth/login")
+                LoginPath = new PathString("/Account/login")
             });
 
             UserManagerFactory = () =>

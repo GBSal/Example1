@@ -16,7 +16,7 @@ namespace SampaleAuthentication.Controllers
         private readonly UserManager<AppUser> userManager;
 
         public AccountController()
-            : this (StartUp.UserManagerFactory.Invoke())
+            : this (Startup.UserManagerFactory.Invoke())
         {
         }
 

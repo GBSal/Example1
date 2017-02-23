@@ -5,7 +5,7 @@ namespace SampaleAuthentication.Extensions
     public class AppDbContext : IdentityDbContext<AppUser>
     {
         public AppDbContext()
-            : base("DefaultConnection")
+            : base("Name=DefaultConnection")
         {
         }
     }

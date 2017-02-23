@@ -13,7 +13,11 @@ namespace SampaleAuthentication.Extensions
         {
             get
             {
-                return this.FindFirst(ClaimTypes.Name).Value;
+                var result = this.FindFirst(ClaimTypes.Name);
+                if (result != null)
+                    return result.Value;
+                else
+                    return "";
             }
         }
 
@@ -21,7 +25,11 @@ namespace SampaleAuthentication.Extensions
         {
             get
             {
-                return this.FindFirst(ClaimTypes.Country).Value;
+                var result = this.FindFirst(ClaimTypes.Country);
+                if (result != null)
+                    return result.Value;
+                else
+                    return "";
             }
         }
     }
